@@ -1,10 +1,7 @@
 <?php
-define("OVERKILL_SECURITY_CHECK_STRING", "hW8fgo2x93V");
-define("THIRTY_DAYS", 2592000);
 require_once "users_functions.php";
 
 // TO DO : MUST USE SESSIONS
-
 function is_logged_in() {
 	if( !isset($_COOKIE['1337h4x0rz']) ) {
 		echo "Fails on isset <br />";
