@@ -1,7 +1,7 @@
 <?php
 require_once("config.php");
 header("Content-Type: text/html; charset=utf-8");
-if(isset($_POST["nameInput"] && isset($_POST["twitterInput"] && isset($_POST["macInput"]))) {
+if(isset($_POST["nameInput"]) && isset($_POST["twitterInput"]) && isset($_POST["macInput"])) {
 	$sql = "INSERT INTO users(name, url, twitter) VALUES(?, ?, ?)";
 	$database -> exec($sql, array(
 		$_POST["nameInput"],
