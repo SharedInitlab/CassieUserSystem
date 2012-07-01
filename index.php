@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: text/html; charset=utf-8");
 ?>
 <!DOCTYPE html>
 <html>
@@ -9,34 +10,39 @@
 	</head>
 	<body>
 		<div class="container">
-			<form class="form-horizontal well">
+			<form class="form-horizontal well" action="" method="post">
 			  <fieldset>
 				<legend>Hide yo mama, hide yo name, hide yo MAC</legend>
 				<div class="control-group">
 				  <label class="control-label" for="input01">Име ?</label>
 				  <div class="controls">
-					<input type="text" class="input-xlarge" id="input01">
+					<input type="text" class="input-xlarge" id="input01" name="nameInput" />
 				  </div>
 				</div>
 				
 				<div class="control-group">
 				  <label class="control-label" for="input02">Twitter ?</label>
 				  <div class="controls">
-					<input type="text" class="input-xlarge" id="input02">
+					<input type="text" class="input-xlarge" id="input02" name="twitterInput" />
 				  </div>
 				</div>
 				
 				<div class="control-group">
 				  <label class="control-label" for="input03">MAC address ?</label>
 				  <div class="controls">
-					<input type="text" class="input-xlarge" id="input03">
+					<input type="text" class="input-xlarge" id="input03" name="macInput">
 					<p class="help-block">
+					Add your mac without the "-"
 					<ul>
 						<li>Windows : <em>run -> cmd -> getmac</em></li>
 						<li>Linux : <em>ifconfig -a</em></li>
 					</ul>
 					</p>
 				  </div>
+				</div>
+				
+				<div class="form-actions">
+					<button type="submit" class="btn btn-primary">Ready to roll!</button>
 				</div>
 			  </fieldset>
 			</form>
