@@ -4,7 +4,7 @@
 <?php
 header("Content-Type: text/html; charset=utf-8");
 require_once("config.php");
-$sql = "SELECT users.id AS id, users.name AS name,users.url AS url, users.twitter AS twitter, objects.value AS mac FROM users JOIN objects ON users.id = objects.userid WHERE objects.type = 'mac'";
+$sql = "SELECT users.id AS id, users.name AS name,users.url AS url, users.twitter AS twitter, objects.value AS mac FROM users JOIN objects ON users.id = objects.userid WHERE objects.type = 'mac' ORDER BY users.id ASC";
 $res = mysql_query($sql);
 
 echo "<table class='table table-bordered'>";
